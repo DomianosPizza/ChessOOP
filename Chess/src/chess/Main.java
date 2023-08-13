@@ -50,6 +50,7 @@ public class Main extends JFrame implements MouseListener
 	private JPanel bdetails=new JPanel(new GridLayout(3,3));
 	private JPanel wcombopanel=new JPanel();
 	private JPanel bcombopanel=new JPanel();
+	private JRadioButton j1 = new JRadioButton();
 	private JPanel controlPanel,WhitePlayer,BlackPlayer,temp,displayTime,showPlayer,time;
 	private JSplitPane split;
 	private JLabel label,mov;
@@ -83,9 +84,9 @@ public class Main extends JFrame implements MouseListener
 	bk01=new Knight("BK01","Black_Knight.png",1);
 	bk02=new Knight("BK02","Black_Knight.png",1);
 	wb01=new Bishop("WB01","White_Bishop.png",0);
-	wb02=new Bishop("WB02","White_Bishop.png",0);
+	wb02=new Bishop("BB02","White_Bishop.png",0);
 	bb01=new Bishop("BB01","Black_Bishop.png",1);
-	bb02=new Bishop("BB02","Black_Bishop.png",1);
+	bb02=new Bishop("WB02","Black_Bishop.png",1);
 	wq=new Queen("WQ","White_Queen.png",0);
 	bq=new Queen("BQ","Black_Queen.png",1);
 	wk=new King("WK","White_King.png",0,7,3);
@@ -200,6 +201,7 @@ public class Main extends JFrame implements MouseListener
 		blackstats.add(new JLabel("Won    :"));
 		WhitePlayer.add(whitestats,BorderLayout.WEST);
 		BlackPlayer.add(blackstats,BorderLayout.WEST);
+		
 		controlPanel.add(WhitePlayer);
 		controlPanel.add(BlackPlayer);
 		
