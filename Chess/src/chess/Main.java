@@ -72,9 +72,11 @@ public class Main extends JFrame implements MouseListener {
 	private Button start, wselect, bselect, WNewPlayer, BNewPlayer;
 	public static int timeRemaining = 60;
 
+	
+	
+	//ArrayLists made for storing used cells
 	private static ArrayList<Integer> WhiteArray = new ArrayList<Integer>();
 	private static ArrayList<Integer> BlackArray = new ArrayList<Integer>();
-
 	private JRadioButton rButton = new JRadioButton("Chess960");
 
 	public static void main(String[] args) {
@@ -110,6 +112,8 @@ public class Main extends JFrame implements MouseListener {
 		Mainboard.setResizable(false);
 	}
 
+	
+	//This fills the arrays with no duplicating values
 	public static void FillArrays() {
 		char state = 'A';
 		int ranNum = 0;
@@ -153,7 +157,7 @@ public class Main extends JFrame implements MouseListener {
 	}
 
 	// Constructor
-	private Main() {
+	public Main() {
 		timeRemaining = 60;
 		timeSlider = new JSlider();
 		move = "White";
@@ -302,7 +306,8 @@ public class Main extends JFrame implements MouseListener {
 					board.add(cell);
 					boardState[i][j] = cell;
 				}
-		} else {
+		} 
+		else {
 			for (int i = 0; i < 8; i++)
 				for (int j = 0; j < 8; j++) {
 					P = null;

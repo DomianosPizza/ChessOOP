@@ -3,12 +3,14 @@ package chess;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import chess.*;
 
 public class TestCases {
 
 	@Test
 	public void TestingWhiteArrayCreation() {
-		fail("Not yet implemented");
+		Main m = new Main();
+		System.out.println();
 	}
 
 }
